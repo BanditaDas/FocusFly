@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useTimer } from '../hooks/useTimer';
 import { Plane, AlertCircle } from 'lucide-react';
 import Globe from './Globe';
+import MusicPlayer from './MusicPlayer';
 
 export default function Simulation({ route, onEndFlight }: { route: any, onEndFlight: (completed: boolean, secondsFlown: number) => void }) {
   const { seconds, isActive, setIsActive } = useTimer(route.duration);
@@ -59,13 +60,16 @@ export default function Simulation({ route, onEndFlight }: { route: any, onEndFl
             </div>
           </div>
 
-          <button 
-            onClick={() => setShowAbortConfirm(true)}
-            className="bg-red-500/20 hover:bg-red-500/30 text-red-400 border border-red-500/30 rounded-xl px-4 py-2 flex items-center gap-2 transition-colors pointer-events-auto"
-          >
-            <AlertCircle className="w-4 h-4" />
-            Abort Flight
-          </button>
+          <div className="flex flex-col items-end gap-4 pointer-events-none">
+            <MusicPlayer />
+            <button 
+              onClick={() => setShowAbortConfirm(true)}
+              className="bg-red-500/20 hover:bg-red-500/30 text-red-400 border border-red-500/30 rounded-xl px-4 py-2 flex items-center justify-center gap-2 transition-colors w-full pointer-events-auto"
+            >
+              <AlertCircle className="w-4 h-4" />
+              Abort Flight
+            </button>
+          </div>
         </div>
 
         {/* Bottom Bar - Focus Mode indicator & Progress */}
@@ -84,7 +88,7 @@ export default function Simulation({ route, onEndFlight }: { route: any, onEndFl
                 animate={{ left: `${progress}%` }}
                 transition={{ ease: "linear", duration: 1 }}
               >
-                <div className="bg-gradient-to-r from-indigo-500 to-cyan-500 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-[0_0_10px_rgba(99,102,241,0.5)] whitespace-nowrap mb-1 flex items-center justify-center">
+                <div className="bg-linear-to-r from-indigo-500 to-cyan-500 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-[0_0_10px_rgba(99,102,241,0.5)] whitespace-nowrap mb-1 flex items-center justify-center">
                   {Math.round(progress)}%
                 </div>
                 <Plane className="w-6 h-6 text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.8)] rotate-90" />

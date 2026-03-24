@@ -1,20 +1,15 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+✈️ Flight Fly — Study Like You’re Traveling
 
-# Run and deploy your AI Studio app
+A unique productivity web app that turns your study sessions into virtual flights.
+Pick a route, start your journey, and stay focused until you land.
 
-This contains everything you need to run your app locally.
+🌍 Concept
 
-View your app in AI Studio: https://ai.studio/apps/79d9dc07-bd15-4666-b6f7-713d730458e6
+Instead of boring timers, Flight Focus simulates a real flight experience:
 
-## Run Locally
+🛫 Takeoff → Start your focus session
+🌎 Live 3D globe with flight path
+⏳ Timer based on flight duration
+🛬 Landing → Session complete
 
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+You’re not “studying” — you’re flying.

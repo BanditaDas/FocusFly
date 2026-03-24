@@ -29,22 +29,18 @@ export default function Dashboard({
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="max-w-[420px] w-full bg-[#13121a] rounded-[2.5rem] p-10 shadow-[0_0_80px_rgba(139,92,246,0.1)] pointer-events-auto relative"
+          className="max-w-125 w-full bg-transparent rounded-[2.5rem] p-10 shadow-[0_0_80px_rgba(139,92,246,0.1)] pointer-events-auto relative"
         >
-          {/* Top-left accent line */}
-          <div className="absolute top-0 left-8 w-12 h-[2px] bg-indigo-500/50 rounded-full" />
-          
-          {/* Bottom-right accent line */}
-          <div className="absolute bottom-10 right-0 w-12 h-[2px] bg-teal-500/50 rounded-full" />
+
 
           <div className="text-center mb-10 mt-2">
-            <h1 className="text-4xl font-bold tracking-tight mb-3 text-white">Focus Flight</h1>
+            <h1 className="text-4xl font-bold tracking-tight mb-3 text-white">Focus Fly</h1>
             <p className="text-slate-400 text-sm">Gamify your study sessions</p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 mb-10">
+          <div className="grid grid-cols-2 gap-8 mb-10">
             {/* Total Flown Card */}
-            <div className="bg-[#1a1924] rounded-2xl p-6 flex flex-col items-center justify-center">
+            <div className="bg-[#2c15635b] rounded-2xl p-6 flex flex-col items-center justify-center">
               <div className="w-10 h-10 rounded-full bg-[#2a2744] flex items-center justify-center mb-4">
                 <Clock className="w-5 h-5 text-[#a78bfa]" />
               </div>
@@ -53,7 +49,7 @@ export default function Dashboard({
             </div>
             
             {/* Journeys Card */}
-            <div className="bg-[#1a1924] rounded-2xl p-6 flex flex-col items-center justify-center">
+            <div className="bg-[#2c15635b] rounded-2xl p-6 flex flex-col items-center justify-center">
               <div className="w-10 h-10 rounded-full bg-[#1d3142] flex items-center justify-center mb-4">
                 <Compass className="w-5 h-5 text-[#38bdf8]" />
               </div>

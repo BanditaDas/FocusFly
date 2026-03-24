@@ -44,7 +44,7 @@ export default function Simulation({ route, onEndFlight }: { route: any, onEndFl
       <div className="relative z-10 w-full h-full flex flex-col justify-between p-8 pointer-events-none">
         {/* Top Bar */}
         <div className="flex items-start justify-between relative">
-          <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl p-6 min-w-[300px] pointer-events-auto">
+          <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl p-6 min-w-75 pointer-events-auto">
             <div className="text-sm text-slate-400 uppercase tracking-wider mb-1">Current Flight</div>
             <div className="text-2xl font-bold flex items-center gap-3">
               {route.from} <Plane className="w-5 h-5 text-indigo-400" /> {route.to}
@@ -69,24 +69,38 @@ export default function Simulation({ route, onEndFlight }: { route: any, onEndFl
         </div>
 
         {/* Bottom Bar - Focus Mode indicator & Progress */}
-        <div className="flex flex-col items-center gap-6 w-full max-w-4xl mx-auto pointer-events-auto">
-          <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-full px-8 py-3 flex items-center gap-3">
-            <div className="w-3 h-3 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="font-medium tracking-wide">Focus Mode Active</span>
-          </div>
+        <div className="flex flex-col items-center w-full max-w-7xl mx-auto pointer-events-auto">
           
-          <div className="w-full bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl p-5">
-            <div className="flex justify-between text-sm mb-3">
-              <span className="text-slate-400 font-medium">{route.from} Departure</span>
-              <span className="text-slate-400 font-medium">{route.to} Arrival</span>
-            </div>
-            <div className="w-full h-3 bg-slate-800 rounded-full overflow-hidden relative">
+          
+          <div className="w-full bg-transparent rounded-3xl p-6 relative shadow-2xl">
+            
+
+            {/* Progress Container */}
+            <div className="relative mt-8 mb-2">
+              {/* Animated Plane & Percentage */}
               <motion.div 
-                className="absolute top-0 left-0 h-full bg-indigo-500"
-                initial={{ width: 0 }}
-                animate={{ width: `${progress}%` }}
+                className="absolute -top-10 flex flex-col items-center -ml-6 z-10"
+                initial={{ left: 0 }}
+                animate={{ left: `${progress}%` }}
                 transition={{ ease: "linear", duration: 1 }}
-              />
+              >
+                <div className="bg-gradient-to-r from-indigo-500 to-cyan-500 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-[0_0_10px_rgba(99,102,241,0.5)] whitespace-nowrap mb-1 flex items-center justify-center">
+                  {Math.round(progress)}%
+                </div>
+                <Plane className="w-6 h-6 text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.8)] rotate-90" />
+              </motion.div>
+
+              {/* Progress Bar Track */}
+              <div className="w-full h-3 bg-slate-800/80 rounded-full overflow-hidden border border-white/5 shadow-inner relative">
+                <motion.div 
+                  className="absolute top-0 left-0 h-full bg-gradient-to-r from-indigo-600 via-indigo-400 to-cyan-400"
+                  initial={{ width: 0 }}
+                  animate={{ width: `${progress}%` }}
+                  transition={{ ease: "linear", duration: 1 }}
+                >
+                  <div className="absolute inset-0 bg-white/20 animate-pulse" />
+                </motion.div>
+              </div>
             </div>
           </div>
         </div>

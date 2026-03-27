@@ -3,8 +3,9 @@ import { Play, Pause, SkipForward, Music } from 'lucide-react';
 
 // Using sample testing URLs. You can replace these with your own local MP3s or preferred URLs.
 const SONGS = [
-  { id: 1, name: 'Lofi Focus', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' },
-  { id: 2, name: 'Deep Work', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3' }
+  { id: 1, name: 'Lofi', url: '/sounds/lofi.mp3' },
+  { id: 2, name: 'cafe', url: '/sounds/cafe.mp3' },
+  { id: 3, name: 'Deep Work', url: '/sounds/deep focus.mp3' }
 ];
 
 export default function MusicPlayer() {

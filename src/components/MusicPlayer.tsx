@@ -5,7 +5,7 @@ import { Play, Pause, SkipForward, Music } from 'lucide-react';
 const SONGS = [
   { id: 1, name: 'Lofi', url: '/sounds/lofi.mp3' },
   { id: 2, name: 'cafe', url: '/sounds/cafe.mp3' },
-  { id: 3, name: 'Deep Work', url: '/sounds/deep focus.mp3' }
+  { id: 3, name: 'Deep Work', url: '/sounds/deep focus.mp3' },
 ];
 
 export default function MusicPlayer() {

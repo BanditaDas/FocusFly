@@ -2,7 +2,13 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { AlertCircle } from 'lucide-react';
 
-export default function AbortModal({ open, onCancel, onConfirm }) {
+interface AbortModalProps {
+  open: boolean;
+  onCancel: () => void;
+  onConfirm: () => void;
+}
+
+export default function AbortModal({ open, onCancel, onConfirm }: AbortModalProps) {
   return (
     <AnimatePresence>
       {open && (
@@ -22,10 +28,17 @@ export default function AbortModal({ open, onCancel, onConfirm }) {
             </p>
 
             <div className="flex gap-3">
-              <button onClick={onCancel} className="flex-1 bg-slate-700 py-2 rounded">
+              <button
+                onClick={onCancel}
+                className="flex-1 bg-slate-700 py-2 rounded"
+              >
                 Cancel
               </button>
-              <button onClick={onConfirm} className="flex-1 bg-red-600 py-2 rounded">
+
+              <button
+                onClick={onConfirm}
+                className="flex-1 bg-red-600 py-2 rounded"
+              >
                 Abort
               </button>
             </div>

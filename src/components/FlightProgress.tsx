@@ -2,7 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Plane } from 'lucide-react';
 
-export default function FlightProgress({ progress }) {
+interface FlightProgressProps {
+  progress: number;
+}
+
+export default function FlightProgress({ progress }: FlightProgressProps) {
   return (
     <div className="absolute bottom-10 w-full flex justify-center z-10">
       <div className="w-full max-w-5xl px-6">

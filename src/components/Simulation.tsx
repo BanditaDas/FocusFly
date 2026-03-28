@@ -7,7 +7,7 @@ import FlightProgress from './FlightProgress';
 import AbortModal from './AbortModal';
 import CompletionModal from './CompletionModal';
 
-export default function Simulation({ route, onEndFlight }) {
+export default function Simulation({ route, onEndFlight }: { route: any, onEndFlight: (completed: boolean, secondsFlown: number) => void }) {
   const { seconds, isActive, setIsActive } = useTimer(route.duration);
   const [showAbortConfirm, setShowAbortConfirm] = useState(false);
   const [showCompletionModal, setShowCompletionModal] = useState(false);

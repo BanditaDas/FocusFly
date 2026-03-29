@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Play, Pause, SkipForward, Music } from 'lucide-react';
+import { TiMediaPauseOutline } from "react-icons/ti";
+import { IoPlayOutline, IoMusicalNotes , IoPlaySkipForwardOutline } from "react-icons/io5";
 
 // Using sample testing URLs. You can replace these with your own local MP3s or preferred URLs.
 const SONGS = [
@@ -32,7 +33,7 @@ export default function MusicPlayer() {
 
   return (
     <div className="flex items-center gap-3 bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl p-3 px-5 shadow-lg pointer-events-auto">
-      <Music className="w-5 h-5 text-indigo-400" />
+      <IoMusicalNotes className="w-5 h-5 text-indigo-400" />
       <div className="text-sm font-medium w-24 truncate text-slate-200">
         {SONGS[currentSong].name}
       </div>
@@ -42,7 +43,7 @@ export default function MusicPlayer() {
         className="p-2 hover:bg-white/10 rounded-full transition-colors text-white"
         title={isPlaying ? "Pause" : "Play"}
       >
-        {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
+        {isPlaying ? <TiMediaPauseOutline className="w-5 h-5" /> : <IoPlayOutline className="w-5 h-5" />}
       </button>
       
       <button 
@@ -50,7 +51,7 @@ export default function MusicPlayer() {
         className="p-2 hover:bg-white/10 rounded-full transition-colors text-slate-300 hover:text-white"
         title="Switch Song"
       >
-        <SkipForward className="w-5 h-5" />
+        <IoPlaySkipForwardOutline className="w-5 h-5" />
       </button>
 
       {/* Hidden Audio Element */}

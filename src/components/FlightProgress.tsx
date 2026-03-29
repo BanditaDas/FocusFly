@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Plane } from 'lucide-react';
+import { IoAirplaneOutline } from "react-icons/io5";
+import { IoIosAirplane } from 'react-icons/io';
+
 
 interface FlightProgressProps {
   progress: number;
@@ -22,7 +24,7 @@ export default function FlightProgress({ progress }: FlightProgressProps) {
             <div className="bg-indigo-500 text-xs px-2 py-1 rounded-full mb-1">
               {Math.round(progress)}%
             </div>
-            <Plane className="w-6 h-6 text-cyan-400 rotate-90" />
+            <IoIosAirplane className="w-8 h-8 text-cyan-700" />
           </motion.div>
 
           {/* Bar */}

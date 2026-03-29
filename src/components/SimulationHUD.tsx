@@ -1,5 +1,6 @@
 import React from 'react';
-import { Plane, AlertCircle } from 'lucide-react';
+import { IoIosAirplane } from "react-icons/io";
+import { BsExclamationCircleFill } from "react-icons/bs";
 import MusicPlayer from './MusicPlayer';
 
 export default function SimulationHUD({ route, seconds, onAbort }) {
@@ -20,7 +21,7 @@ export default function SimulationHUD({ route, seconds, onAbort }) {
         <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl p-6 min-w-75 pointer-events-auto">
           <div className="text-sm text-slate-400 uppercase mb-1">Current Flight</div>
           <div className="text-2xl font-bold flex items-center gap-3">
-            {route.from} <Plane className="w-5 h-5 text-indigo-400" /> {route.to}
+            {route.from} <IoIosAirplane className="w-5 h-5 text-indigo-400" /> {route.to}
           </div>
         </div>
 
@@ -40,7 +41,7 @@ export default function SimulationHUD({ route, seconds, onAbort }) {
             onClick={onAbort}
             className="bg-red-500/20 hover:bg-red-500/30 text-red-400 border border-red-500/30 rounded-xl px-4 py-2 flex items-center gap-2 pointer-events-auto"
           >
-            <AlertCircle className="w-4 h-4" />
+            <BsExclamationCircleFill className="w-4 h-4" />
             Abort Flight
           </button>
         </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Plane } from 'lucide-react';
+import { IoClose } from "react-icons/io5";
+import { IoIosAirplane } from "react-icons/io";
 import { CITIES, generateRoute } from '../constants/flightRoutes';
 
 export default function BookingModal({ onClose, onConfirm }: { onClose: () => void, onConfirm: (route: any) => void }) {
@@ -56,7 +57,7 @@ export default function BookingModal({ onClose, onConfirm }: { onClose: () => vo
           onClick={onClose}
           className="absolute top-4 right-4 text-slate-400 hover:text-white transition-colors z-10"
         >
-          <X className="w-6 h-6" />
+          <IoClose className="w-6 h-6" />
         </button>
 
         <AnimatePresence mode="wait">
@@ -86,7 +87,7 @@ export default function BookingModal({ onClose, onConfirm }: { onClose: () => vo
 
                 {/* Center: Plane and Duration */}
                 <div className="flex flex-col items-center justify-center px-2 w-1/5">
-                  <Plane className="w-6 h-6 text-slate-500 mb-2 rotate-90" />
+                  <IoIosAirplane className="w-8 h-8 text-slate-500 mb-2" />
                   <div className="text-slate-300 font-medium text-sm md:text-base whitespace-nowrap">{formatDuration(route.duration)}</div>
                 </div>
 
@@ -141,7 +142,7 @@ export default function BookingModal({ onClose, onConfirm }: { onClose: () => vo
               className="text-center py-12 relative z-10"
             >
               <div className="w-24 h-24 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Plane className="w-12 h-12 text-emerald-400" />
+                <IoIosAirplane className="w-12 h-12 text-emerald-400" />
               </div>
               <h3 className="text-3xl font-bold text-white mb-2">Boarding Pass Ready</h3>
               <p className="text-slate-400 mb-2">

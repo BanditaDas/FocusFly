@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle } from 'lucide-react';
+import { FaPlaneArrival } from "react-icons/fa6";
 
 interface CompletionModalProps {
   open: boolean;
@@ -19,7 +19,7 @@ export default function CompletionModal({ open, onConfirm }: CompletionModalProp
             exit={{ opacity: 0, scale: 0.9 }}
             className="bg-slate-900 w-full max-w-md p-8 rounded-2xl text-center"
           >
-            <CheckCircle className="w-16 h-16 text-emerald-500 mx-auto mb-4" />
+            <FaPlaneArrival className="w-16 h-16 text-emerald-500 mx-auto mb-4" />
 
             <h3 className="text-2xl font-bold mb-2">Flight Landed!</h3>
             <p className="text-slate-400 mb-6">

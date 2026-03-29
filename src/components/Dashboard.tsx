@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Rocket, Clock, Compass } from 'lucide-react';
+import { IoIosAirplane } from "react-icons/io";
+import { FaClock ,FaCompass } from "react-icons/fa6";
 import Globe from './Globe';
 import BookingModal from './BookingModal';
 
@@ -42,7 +43,7 @@ export default function Dashboard({
             {/* Total Flown Card */}
             <div className="bg-[#2c15635b] rounded-2xl p-6 flex flex-col items-center justify-center">
               <div className="w-10 h-10 rounded-full bg-[#2a2744] flex items-center justify-center mb-4">
-                <Clock className="w-5 h-5 text-[#a78bfa]" />
+                <FaClock className="w-5 h-5 text-[#a78bfa]" />
               </div>
               <div className="text-3xl font-bold text-white mb-2">{totalHours}h</div>
               <div className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Total Flown</div>
@@ -51,7 +52,7 @@ export default function Dashboard({
             {/* Journeys Card */}
             <div className="bg-[#2c15635b] rounded-2xl p-6 flex flex-col items-center justify-center">
               <div className="w-10 h-10 rounded-full bg-[#1d3142] flex items-center justify-center mb-4">
-                <Compass className="w-5 h-5 text-[#38bdf8]" />
+                <FaCompass className="w-5 h-5 text-[#38bdf8]" />
               </div>
               <div className="text-3xl font-bold text-white mb-2">{journeys}</div>
               <div className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Journeys</div>
@@ -60,10 +61,10 @@ export default function Dashboard({
 
           <button
             onClick={() => setIsModalOpen(true)}
-            className="w-full py-5 bg-gradient-to-r from-[#a78bfa] to-[#8b5cf6] hover:from-[#b49bfb] hover:to-[#9f75f7] text-[#13121a] rounded-full font-bold text-sm tracking-widest uppercase transition-all flex items-center justify-center gap-3 shadow-[0_0_30px_rgba(139,92,246,0.3)] mb-8"
+            className="w-full py-4 bg-linear-to-r from-[#a78bfa] to-[#8b5cf6] hover:from-[#b49bfb] hover:to-[#9f75f7] text-[#13121a] rounded-full font-bold text-sm tracking-widest uppercase transition-all flex items-center justify-center gap-3 shadow-[0_0_30px_rgba(139,92,246,0.3)] mb-8"
           >
-            <Rocket className="w-5 h-5 fill-current" />
-            Book a Flight
+            <IoIosAirplane className="w-6 h-6 fill-current rotate-305" />
+            Book a Flight 
           </button>
 
           {/* Status Indicators */}

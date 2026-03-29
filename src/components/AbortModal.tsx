@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { AlertCircle } from 'lucide-react';
+import { BsExclamationCircleFill } from "react-icons/bs";
 
 interface AbortModalProps {
   open: boolean;
@@ -20,7 +20,7 @@ export default function AbortModal({ open, onCancel, onConfirm }: AbortModalProp
             exit={{ opacity: 0, scale: 0.9 }}
             className="bg-slate-900 p-6 rounded-2xl text-center"
           >
-            <AlertCircle className="w-12 h-12 text-red-500 mx-auto mb-4" />
+            <BsExclamationCircleFill className="w-12 h-12 text-red-500 mx-auto mb-4" />
 
             <h3 className="text-xl font-bold mb-2">Abort Flight?</h3>
             <p className="text-slate-400 mb-6">

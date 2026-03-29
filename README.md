@@ -1,7 +1,7 @@
 # ✈️ FocusFly
 
-> **Study sessions that feel like traveling.**  
-> Turn your focus time into real-time flights across the globe.
+ **Study sessions that feel like traveling.**  
+ Turn your focus time into real-time flights across the globe.
 
 ---
 
@@ -10,7 +10,7 @@
 Pick a destination, start your session, and stay focused until you land.  
 If you quit early… your flight fails.
 
-> You’re not studying — you’re flying.
+ *You’re not studying — you’re flying.*
 
 ---
 
@@ -27,7 +27,7 @@ If you quit early… your flight fails.
 ## ✨ Features
 
 - ✈️ Flight-based focus sessions  
-- 🌍 Interactive 3D globe (Three.js)  
+- 🌍 Interactive 3D globe   
 - 🛫 Real-time flight simulation  
 - ⏱️ Distraction-free timer  
 - 📊 Productivity dashboard  

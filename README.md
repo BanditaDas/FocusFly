@@ -14,6 +14,12 @@ If you quit early… your flight fails.
 
 ---
 
+## 🌐 Live Demo
+
+👉 **[Visit FocusFly](https://focus-fly.vercel.app/)**  
+
+---
+
 ## 🌍 How It Works
 
 | Step | Action |
@@ -54,8 +60,3 @@ FocusFly uses **visual progress + gamification** to keep you engaged.
 
 ---
 
-## 🌐 Live Demo
-
-👉 **[Visit FocusFly](https://your-live-link.com)**  
-
----
